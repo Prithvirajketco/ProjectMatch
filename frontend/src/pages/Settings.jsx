@@ -37,7 +37,7 @@ export default function Settings() {
           {activeTab === 'Profile' && (
             <>
               <div className="flex items-center gap-6 mb-8 pb-8 border-b border-gray-100">
-                <img src="https://i.pravatar.cc/150?img=11" className="w-20 h-20 rounded-full border border-gray-200" alt="Avatar" />
+                <img src="/profile.jpg" className="w-20 h-20 rounded-full border border-gray-200" alt="Avatar" />
                 <div>
                   <h2 className="text-xl font-bold text-gray-900">Prithviraj. K</h2>
                   <p className="text-sm text-gray-500 mb-3">ananda@fastsrm.edu</p>

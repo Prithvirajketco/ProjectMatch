@@ -179,7 +179,7 @@ function App() {
               <div className="relative">
                 <div onClick={() => { setProfileOpen(!profileOpen); setNotifOpen(false); }} className="flex items-center gap-3 cursor-pointer p-1.5 hover:bg-gray-50 rounded-xl transition-colors">
                   <img 
-                    src="https://i.pravatar.cc/150?img=11" 
+                    src="/profile.jpg" 
                     alt="User" 
                     className="w-9 h-9 rounded-full object-cover"
                   />
