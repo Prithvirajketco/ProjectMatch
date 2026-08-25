@@ -183,7 +183,7 @@ function App() {
                     alt="User" 
                     className="w-9 h-9 rounded-full object-cover"
                   />
-                  <span className="text-sm font-medium text-gray-700">Ananda Faris</span>
+                  <span className="text-sm font-medium text-gray-700">Prithviraj. K</span>
                   <ChevronDown size={16} className={`text-gray-400 transition-transform ${profileOpen ? 'rotate-180' : ''}`} />
                 </div>
                 {profileOpen && (

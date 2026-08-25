@@ -39,7 +39,7 @@ export default function Settings() {
               <div className="flex items-center gap-6 mb-8 pb-8 border-b border-gray-100">
                 <img src="https://i.pravatar.cc/150?img=11" className="w-20 h-20 rounded-full border border-gray-200" alt="Avatar" />
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900">Ananda Faris</h2>
+                  <h2 className="text-xl font-bold text-gray-900">Prithviraj. K</h2>
                   <p className="text-sm text-gray-500 mb-3">ananda@fastsrm.edu</p>
                   <div className="flex gap-2">
                     <button className="px-4 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800">Change Avatar</button>
