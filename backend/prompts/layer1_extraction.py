@@ -1,7 +1,8 @@
 import json
 import re
 import google.generativeai as genai
-from ..config import MODEL_NAME, USE_LLM
+from config import MODEL_NAME, USE_LLM
+
 
 SYSTEM_PROMPT = """
 You are an expert technical recruiter. Your job is to extract structured profile data from messy, free-text self-descriptions.

@@ -1,7 +1,8 @@
 import json
 import google.generativeai as genai
-from ..config import MODEL_NAME, USE_LLM
-from .heuristic_fallback import heuristic_match
+from config import MODEL_NAME, USE_LLM
+from prompts.heuristic_fallback import heuristic_match
+
 
 SYSTEM_PROMPT = """
 You are a technical team assembly AI.

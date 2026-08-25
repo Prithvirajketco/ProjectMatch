@@ -1,6 +1,7 @@
 import json
 import google.generativeai as genai
-from ..config import MODEL_NAME, USE_LLM
+from config import MODEL_NAME, USE_LLM
+
 
 SYSTEM_PROMPT = """
 You are an independent AI Validator.
