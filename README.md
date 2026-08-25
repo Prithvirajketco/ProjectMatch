@@ -5,6 +5,13 @@ ProjectMatch is a modern, full-stack application designed to assemble balanced, 
 
 ---
 
+## 🌐 Live Deployment Links
+
+- **Frontend (Vercel):** [https://vercel.com/ketco/project-match/5ggm1NeQvxQxv8cLJMddQC7DFXAw](https://vercel.com/ketco/project-match/5ggm1NeQxv8cLJMddQC7DFXAw)
+- **Backend (Render API):** [https://projectmatch-backend1.onrender.com](https://projectmatch-backend1.onrender.com)
+
+---
+
 ## ⚡ Core Features
 
 - **Layered Reasoning Pipeline:** Runs Profile Extraction (Layer 1), Constraint-Aware Selection (Layer 2), and Validation Critique (Layer 3) with a feedback loop.
