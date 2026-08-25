@@ -1,9 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from ..database import get_db
-from ..prompts.layer1_extraction import run_layer1
+from database import get_db
+from prompts.layer1_extraction import run_layer1
 from bson import ObjectId
 import asyncio
+
 
 router = APIRouter(prefix="/api/candidates", tags=["Candidates"])
 

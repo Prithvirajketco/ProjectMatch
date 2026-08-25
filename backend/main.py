@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import Database
-from .routes import candidates, projects, matching
+from database import Database
+from routes import candidates, projects, matching
+
 
 app = FastAPI(title="ProjectMatch API")
 
@@ -27,8 +28,9 @@ async def shutdown_db_client():
 
 @app.get("/")
 def read_root():
-    from .config import USE_LLM, HACKATHON_MODE
+    from config import USE_LLM, HACKATHON_MODE
     return {
+
         "message": "ProjectMatch API is running",
         "llm_enabled": USE_LLM,
         "hackathon_mode": HACKATHON_MODE,

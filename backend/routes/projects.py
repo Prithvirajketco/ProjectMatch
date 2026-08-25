@@ -1,7 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from ..database import get_db
-from ..models import ProjectRequirements
+from database import get_db
+from models import ProjectRequirements
 from bson import ObjectId
+
 
 router = APIRouter(prefix="/api/projects", tags=["Projects"])
 

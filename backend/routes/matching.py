@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException
-from ..pipeline import run_match_pipeline, run_naive_match
-from ..database import get_db
+from pipeline import run_match_pipeline, run_naive_match
+from database import get_db
 from bson import ObjectId
 import asyncio
+
 
 router = APIRouter(prefix="/api/match", tags=["Matching"])
 

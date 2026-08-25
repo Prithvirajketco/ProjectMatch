@@ -1,9 +1,10 @@
 import time
 import logging
-from .prompts.layer1_extraction import run_layer1
-from .prompts.layer2_matching import run_layer2
-from .prompts.layer3_critique import run_layer3
-from .prompts.naive_baseline import run_naive
+from prompts.layer1_extraction import run_layer1
+from prompts.layer2_matching import run_layer2
+from prompts.layer3_critique import run_layer3
+from prompts.naive_baseline import run_naive
+
 
 logger = logging.getLogger(__name__)
 

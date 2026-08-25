@@ -1,6 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
-from .config import MONGO_URI, DB_NAME
+from config import MONGO_URI, DB_NAME
 from bson import ObjectId
+
 
 class Database:
     client: AsyncIOMotorClient = None
