@@ -109,6 +109,125 @@ export default function AIFeatures() {
           </div>
         </div>
       </div>
+
+      {/* Layer 2 Tester */}
+      <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
+        <h2 className="text-xl font-bold mb-6 flex items-center gap-2"><Bot className="text-blue-600"/> Test Layer 2 Matcher</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Project Requirements</label>
+            <textarea 
+              className="w-full h-40 p-4 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
+              defaultValue={`Need 3 developers to build a healthcare React web app. Required skills: React, TypeScript, Node.js.\nCandidates Pool: [5 available]`}
+            ></textarea>
+            <button 
+              onClick={() => {
+                // Mock L2 execution
+                const btn = document.getElementById('l2-btn');
+                btn.innerText = 'Processing...';
+                btn.disabled = true;
+                setTimeout(() => {
+                  document.getElementById('l2-output').classList.remove('hidden');
+                  document.getElementById('l2-placeholder').classList.add('hidden');
+                  btn.innerText = 'Run Layer 2 Match';
+                  btn.disabled = false;
+                }, 1500);
+              }}
+              id="l2-btn"
+              className="mt-4 bg-gray-900 hover:bg-black text-white px-6 py-2.5 rounded-xl font-medium flex items-center gap-2 transition-colors disabled:opacity-70"
+            >
+              Run Layer 2 Match <ArrowRight size={18}/>
+            </button>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col h-full min-h-[250px]">
+            <label className="block text-sm font-semibold text-gray-700 mb-4">Proposed Team Output</label>
+            
+            <div id="l2-output" className="hidden space-y-4">
+              <div className="bg-white p-3 rounded-lg border border-gray-200">
+                 <div className="font-bold text-sm">Dev A (Frontend)</div>
+                 <div className="text-xs text-gray-600 mt-1">Reason: Best React expertise in the pool (high confidence).</div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-gray-200">
+                 <div className="font-bold text-sm">Dev B (Backend)</div>
+                 <div className="text-xs text-gray-600 mt-1">Reason: Covers Node.js dependency with 30hrs availability.</div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-gray-200">
+                 <div className="font-bold text-sm">Dev C (Domain)</div>
+                 <div className="text-xs text-gray-600 mt-1">Reason: Only candidate with Healthcare Domain interest.</div>
+              </div>
+              <div className="text-xs text-red-500 font-semibold mt-2">Coverage Gap: TypeScript</div>
+            </div>
+
+            <div id="l2-placeholder" className="m-auto text-gray-400 text-sm flex flex-col items-center gap-2">
+              <Bot size={32} className="opacity-50"/>
+              <span>Waiting for input...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Layer 3 Tester */}
+      <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
+        <h2 className="text-xl font-bold mb-6 flex items-center gap-2"><ShieldAlert className="text-red-600"/> Test Layer 3 Critique</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">Proposed Team (From L2)</label>
+            <div className="w-full h-40 p-4 bg-gray-50 border border-gray-200 rounded-xl text-sm overflow-auto">
+              <pre className="text-xs text-gray-600 font-mono">
+{JSON.stringify({
+  team: [
+    { name: "Dev A", role: "Frontend" },
+    { name: "Dev B", role: "Backend" },
+    { name: "Dev C", role: "Domain" }
+  ],
+  coverage_gap: ["TypeScript"]
+}, null, 2)}
+              </pre>
+            </div>
+            <button 
+              onClick={() => {
+                // Mock L3 execution
+                const btn = document.getElementById('l3-btn');
+                btn.innerText = 'Critiquing...';
+                btn.disabled = true;
+                setTimeout(() => {
+                  document.getElementById('l3-output').classList.remove('hidden');
+                  document.getElementById('l3-placeholder').classList.add('hidden');
+                  btn.innerText = 'Run Layer 3 Critique';
+                  btn.disabled = false;
+                }, 1200);
+              }}
+              id="l3-btn"
+              className="mt-4 bg-gray-900 hover:bg-black text-white px-6 py-2.5 rounded-xl font-medium flex items-center gap-2 transition-colors disabled:opacity-70"
+            >
+              Run Layer 3 Critique <ArrowRight size={18}/>
+            </button>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col h-full min-h-[250px]">
+            <label className="block text-sm font-semibold text-gray-700 mb-4">Independent Validation Output</label>
+            
+            <div id="l3-output" className="hidden space-y-4">
+               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg font-bold">
+                  Status: REVISE
+               </div>
+               <div className="text-sm">
+                 <span className="font-bold">Flagged Issue: </span> Missing Critical Skill Coverage
+               </div>
+               <div className="text-sm">
+                 <span className="font-bold">Feedback provided back to L2: </span> 
+                 "The proposed team is missing coverage for 'TypeScript'. Please revise the team composition by replacing a member to satisfy this requirement without dropping React or Node.js."
+               </div>
+            </div>
+
+            <div id="l3-placeholder" className="m-auto text-gray-400 text-sm flex flex-col items-center gap-2">
+              <ShieldAlert size={32} className="opacity-50"/>
+              <span>Waiting for proposed team...</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
