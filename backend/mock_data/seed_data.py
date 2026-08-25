@@ -7,8 +7,8 @@ import time
 # Add parent directory to path for standalone execution
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.config import MONGO_URI, DB_NAME, USE_LLM
-from backend.prompts.layer1_extraction import run_layer1
+from config import MONGO_URI, DB_NAME, USE_LLM
+from prompts.layer1_extraction import run_layer1
 
 CANDIDATES_RAW = [
     {"name": "Alice Chen", "raw_text": "I'm a fullstack dev, mainly React and Node.js. Built a few production apps. Also know some basic Python. Free on weekends, maybe 10 hours."},
