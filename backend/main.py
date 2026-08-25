@@ -35,3 +35,12 @@ def read_root():
         "llm_enabled": USE_LLM,
         "hackathon_mode": HACKATHON_MODE,
     }
+
+@app.post("/seed")
+async def seed_database():
+    from mock_data.seed_data import seed_db
+    try:
+        await seed_db()
+        return {"status": "success", "message": "Database seeded successfully!"}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
