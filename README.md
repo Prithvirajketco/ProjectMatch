@@ -7,7 +7,7 @@ ProjectMatch is a modern, full-stack application designed to assemble balanced, 
 
 ## 🌐 Live Deployment Links
 
-- **Frontend (Vercel):** [https://vercel.com/ketco/project-match/5ggm1NeQvxQxv8cLJMddQC7DFXAw](https://vercel.com/ketco/project-match/5ggm1NeQxv8cLJMddQC7DFXAw)
+- **Frontend (Vercel):** [https://vercel.com/ketco/project-match/5ggm1NeQvxQxv8cLJMddQC7DFXAw](https://project-match-rust.vercel.app/)
 - **Backend (Render API):** [https://projectmatch-backend1.onrender.com](https://projectmatch-backend1.onrender.com)
 
 ---
